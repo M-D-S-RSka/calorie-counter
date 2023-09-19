@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -7,22 +8,23 @@ class Main {
         while (true) {
             printMenu();
             int i = scanner.nextInt();
-            if (i == 1){
+            if (i == 1) {
                 stepTracker.addNewNumberStepsPerDay();
-            }else if (i == 2){
+            } else if (i == 2) {
                 stepTracker.changeStepGoal();
-            }else if (i == 3){
+            } else if (i == 3) {
                 stepTracker.printStatistic();
-            }else if (i ==4){
+            } else if (i == 4) {
                 System.out.println("До скорой встречи!");
                 scanner.close();
                 return;
-            }else{
+            } else {
                 System.out.println("Данная команда отсутствует, попробуйте еще:)");
             }
         }
     }
-    static void printMenu(){
+
+    static void printMenu() {
         System.out.println("Что Вы хотите сделать?");
         System.out.println("1 - Ввести количество шагов за определённый день;");
         System.out.println("2 - Изменить цель по количеству шагов в день;");
